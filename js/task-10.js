@@ -6,17 +6,18 @@ const boxesAll = document.querySelector("#boxes");
 const buttonCreate = document.querySelector("button[data-create]");
 const buttonDestroy = document.querySelector("button[data-destroy]");
 const inputElement = document.querySelector("input");
-let size = 30
+let size = 30;
 
 buttonCreate.addEventListener("click", () => {
   console.log(inputElement.value);
   createBoxes(inputElement.value);
   inputElement.value = "";
+  console.log(boxesAll.innerHTML);
 });
 
 buttonDestroy.addEventListener("click", () => {
   boxesAll.innerHTML = "";
-  size = 30;
+  size = 30;  
 })
 // controlsElement.addEventListener("change", (event) => {
 //   let inputAsNumber = event.target.valueAsNumber;
